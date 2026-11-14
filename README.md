@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Random Topic｜日常聊天話題隨機產生器
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Random Topic 是一個簡單的 React 網頁工具，從 `public/topics.txt` 載入話題清單，按下開始後以固定間隔隨機切換顯示內容，按下停止則停止輪播。
 
-## Available Scripts
+## 功能
 
-In the project directory, you can run:
+- 從靜態文字檔載入話題清單。
+- 將每一行文字視為一個獨立話題。
+- 開始後每 100 毫秒隨機選取一個話題。
+- 停止後保留目前顯示的話題。
 
-### `npm start`
+## 技術
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React 18
+- Create React App／react-scripts
+- JavaScript
+- React Hooks：useState、useEffect、useRef
+- Fetch API、setInterval
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 資料來源
 
-### `npm test`
+話題內容儲存在 `public/topics.txt`，目前包含日常聊天、興趣、旅行及個人想法等開放式問題。新增話題時可在檔案中增加一行文字。
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 目前實作界線
 
-### `npm run build`
+- 目前只支援從靜態文字檔讀取話題，沒有使用者自訂清單或後端資料庫。
+- 每 100 毫秒切換一次，屬快速隨機輪播，不是有動畫緩動或公平抽籤紀錄的抽選系統。
+- Fetch 流程沒有完整的 HTTP 錯誤處理。
+- 本次依程式碼整理，未重新安裝依賴或執行 build。
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+詳細程式證據與技術回顧請參閱 [PROJECT_RETROSPECTIVE.md](PROJECT_RETROSPECTIVE.md)。
